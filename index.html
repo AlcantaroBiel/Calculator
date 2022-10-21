@@ -1,0 +1,38 @@
+<html>
+    <body>
+        <script>
+            var primeiroNumero = prompt("Escolha um numero");
+
+            var sinal = prompt("Escolha uma operação (+, -, *, ;)");
+
+            while(sinal != '+' && sinal != '-' && sinal != '*' && sinal != '/'){
+                alert("Selecione uma operação válida (+, -, *, ;)");
+                    sinal = prompt("Escolha uma operação (+, -, *, ;)");
+            }
+
+            var segundoNumero = prompt("Escolha o segundo numero");
+
+            primeiroNumero = parseInt(primeiroNumero);
+            segundoNumero = parseInt(segundoNumero);
+
+            var resultado = 0;
+
+            if(sinal == '+'){
+                resultado = primeiroNumero + segundoNumero;
+            } else if(sinal == '-'){
+                resultado = primeiroNumero - segundoNumero;
+            } else if(sinal == '*'){
+                resultado = primeiroNumero * segundoNumero;
+            } else if(sinal == '/'){
+                resultado = primeiroNumero / segundoNumero;
+            }
+
+            alert("O resultado é "+ resultado);
+
+            console.log(primeiroNumero);
+            console.log(sinal);
+            console.log(segundoNumero);
+            console.log(resultado);
+        </script>
+    </body>
+</html>
