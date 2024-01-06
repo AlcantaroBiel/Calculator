@@ -1,22 +1,29 @@
 <html>
     <body>
         <script>
+            //Recebe o primeiro valor
             var primeiroNumero = prompt("Escolha um numero");
-
+            
+            //Recebe o sinal da operação
             var sinal = prompt("Escolha uma operação (+, -, *, ;)");
-
+            
+            //Verifica se o sinal é válido
             while(sinal != '+' && sinal != '-' && sinal != '*' && sinal != '/'){
                 alert("Selecione uma operação válida (+, -, *, ;)");
                     sinal = prompt("Escolha uma operação (+, -, *, ;)");
             }
-
+            
+            //Recebe o segundo valor
             var segundoNumero = prompt("Escolha o segundo numero");
-
+            
+            //Transforma os prompts em inteiros
             primeiroNumero = parseInt(primeiroNumero);
             segundoNumero = parseInt(segundoNumero);
 
+            //Cria a variavel resultado
             var resultado = 0;
 
+            //Identifica qual operação será realizada
             if(sinal == '+'){
                 resultado = primeiroNumero + segundoNumero;
             } else if(sinal == '-'){
@@ -27,6 +34,7 @@
                 resultado = primeiroNumero / segundoNumero;
             }
 
+            //Imprime o resultado na tela do usuário
             alert("O resultado é "+ resultado);
 
             console.log(primeiroNumero);
